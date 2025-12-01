@@ -2,10 +2,14 @@ package com.example.shop;
 
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 @ToString
 @Entity
+@Getter
+@Setter
 public class Item {
 
 
@@ -13,8 +17,8 @@ public class Item {
     public Long id;
 
     @Column(nullable = false,unique = true)
-    public String title;
-    public Integer price;
+    private String title;
+    private Integer price;
 
 
 
